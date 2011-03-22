@@ -19,6 +19,13 @@ weakest of machines.
 * Doesn't care about robots.txt.  If you want a nice crawler, there are hundreds
 of them out there.  This is for ripping a site as fast as possible.
 
+Requires:
+
+* libxml2-devel
+* libcurl-devel
+* pthreads
+* pcre-devel
+
 Notes:
 
 * fakesite/crawlme.php is a php script that simulates a site that you can use to
