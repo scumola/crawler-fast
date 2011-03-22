@@ -1,0 +1,47 @@
+I wrote a crawler in 2005 in C.  I meant for it to be the fastest, least-nice
+crawler that I could build.  I've modified it several times over the years and
+wrote some wrapper scripts for it to help with the de-duping and url-management.
+
+This is not a well-packaged tool that's plug-and-play.  It's a collection of a
+bunch of scripts and tools that I've written to do different jobs for different
+projects.
+
+I used this crawler to generate the URL seed list for archiveteam.org for the
+geocities.com rescue project.
+
+Now, I'm releasing it into the public via github so that other people can use it
+and make good use of it.
+
+Features:
+
+* Super/mega fast and efficient.  100 threads on linux should be do-able on the
+weakest of machines.
+* Doesn't care about robots.txt.  If you want a nice crawler, there are hundreds
+of them out there.  This is for ripping a site as fast as possible.
+
+Notes:
+
+* fakesite/crawlme.php is a php script that simulates a site that you can use to
+test the crawler.
+
+  example: .../crawlme.php?numurls=100&depth=4 will provide a good bunch of urls
+to crawl with the crawler.
+
+* crawl.dat is the file of urls that the crawler will grab.
+* output/timestamp is the output directory for each crawl.
+* I'm working on a URL-distribution server for running these crawlers on multiple
+machines but I may start that as a seperate project.
+
+If you want to contribute anything to the project, feel free, however, my general
+philosophy about the crawler is to keep it as lean and mean as possible.  No
+SQL, no fancy stuff.  Keep using the unix tools (text utils, pipes, threadding)
+and stay away from bloated technologies (ruby, sql, ...) and I'll be really happy
+to add your contributions to the project.
+
+TODO:
+
+* perhaps put the BerkeleyDB management into the crawler, so it's more self-
+contained.
+* add queueing to each thread, so each thread pulls more than one url to work on.
+
+- Steve Webb (bigwebb@gmail.com)
