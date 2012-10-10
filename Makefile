@@ -1,8 +1,8 @@
 #CFLAGS = -g -pg
 #CFLAGS = -g -gstabs
-CFLAGS = -g
+#CFLAGS = -g
 #CFLAGS = -g -Wall
-#CFLAGS = -g -O3
+CFLAGS = -g -O2
 I =
 CRAWLL = -lpthread -lcurl
 RELABSL = -lpcre

@@ -257,13 +257,14 @@ int main(int argc, char **argv) {
 	int i;
 	int opt;
 	int error;
+    int retcode;
 
 	num_threads = DEFAULT_NUM_THREADS;
 
 	unixtime = (long)time(NULL);
-	system("mkdir output");
+	retcode = system("mkdir output");
 	sprintf(tmpstring,"mkdir output/%ld",unixtime);
-	system(tmpstring);
+	retcode = system(tmpstring);
 	sprintf(tmpstring,"output/%ld/crawl.txt",unixtime);
 	status_out = fopen(tmpstring,"w");
 
@@ -316,6 +317,6 @@ int main(int argc, char **argv) {
 
 	fclose(status_out);
 	sprintf(tmpstring,"touch output/%ld/crawl.done",unixtime);
-	system(tmpstring);
+	retcode = system(tmpstring);
 	return 0;
 }
