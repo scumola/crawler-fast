@@ -15,7 +15,7 @@
 #define BUFF_SIZE 30000
 #define FILENAME "crawl.dat"
 //#define FILENAMEOUT "output/crawl.out"
-#define DEFAULT_NUM_THREADS 30
+#define DEFAULT_NUM_THREADS 100
 #define DELAY_SECONDS 10
 
 #define debug(x) printf("%s:%d:%s(): %s\n", __FILE__, __LINE__, __FUNCTION__, x)
