@@ -20,7 +20,7 @@ GETURLSO = geturls.o
 all: domains rel2abs crawl geturls tags
 
 geturls: $(GETURLSO)
-	gcc -o geturls `xml2-config --cflags --libs` $(CFLAGS) $(I) $(GETURLSO)
+	gcc -o geturls  $(CFLAGS) $(I) $(GETURLSO) `xml2-config --cflags --libs`
 
 domains: $(DOMAINSO)
 	gcc -o domains $(CFLAGS) $(I) $(DOMAINSO) $(DOMAINSL)
